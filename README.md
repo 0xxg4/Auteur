@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">Auteur</h1>
 <p align="center">
-  Distraction-Free Writer App for Ubuntu Touch.
+  Distraction-Free Writing App for Ubuntu Touch.
 </p>
 
 ## License
