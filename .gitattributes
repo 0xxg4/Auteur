@@ -1,0 +1,4 @@
+*.cpp linguist-detectable=true
+*.h linguist-detectable=true
+*.txt linguist-detectable=false
+*.qml linguist-detectable=false
