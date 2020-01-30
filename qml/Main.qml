@@ -21,6 +21,7 @@ import QtQuick.Layouts 1.3
 import Ubuntu.Content 0.1
 import Ubuntu.Components.Themes.Ambiance 1.3
 import Qt.labs.settings 1.0
+import "./components"
 
 MainView {
     id: root
@@ -28,10 +29,12 @@ MainView {
     applicationName: 'auteur.gabrielpolastrini'
     automaticOrientation: true
 
+    property bool narrowMode
+
     width: units.gu(45)
     height: units.gu(55)
 
-    Page {
+    PageWithBottomEdge {
 
         header: TextField {
           id: header
@@ -74,5 +77,7 @@ MainView {
           onCursorRectangleChanged: flick.ensureVisible(cursorRectangle)
  
         }
+      bottomEdgeTitle: i18n.tr("Settings")
     }
 }
+   
