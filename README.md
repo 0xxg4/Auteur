@@ -1,6 +1,10 @@
-# Auteur
-
-Distraction-Free Writer App for Ubuntu Touch.
+<p align="center">
+  <img src="./assets/logo.svg" alt="Icon" width="200px"/>
+</p>
+<h1 align="center">Auteur</h1>
+<p align="center">
+  Distraction-Free Writing App for Ubuntu Touch.
+</p>
 
 ## License
 
