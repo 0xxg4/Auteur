@@ -34,7 +34,7 @@ MainView {
     width: units.gu(45)
     height: units.gu(55)
 
-    PageWithBottomEdge {
+    Page {
 
         header: TextField {
           id: header
@@ -77,7 +77,38 @@ MainView {
           onCursorRectangleChanged: flick.ensureVisible(cursorRectangle)
  
         }
-      bottomEdgeTitle: i18n.tr("Settings")
+      RadialBottomEdge {
+            id: nav
+            visible: true
+            actions: [
+                RadialAction {
+                    id: info
+                    iconName: "info"
+                    onTriggered: {
+                       // webview.reload()
+                    }
+                    text: qsTr("Info")
+                },
+
+                 RadialAction {
+                    id: settings
+                    iconName: "settings"
+                    onTriggered: {
+                       // webview.reload()
+                    }
+                    text: qsTr("Settings")
+                },
+
+                RadialAction {
+                    id: save
+                    iconName: "save"
+                    onTriggered: {
+                       // webview.reload()
+                    }
+                    text: qsTr("Save")
+                }
+            ]
+        } 
     }
 }
    
