@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * ubuntu-calculator-app is distributed in the hope that it will be useful,
+ * Auteur is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -34,7 +34,11 @@ MainView {
     width: units.gu(45)
     height: units.gu(55)
 
-    Page {
+  PageStack {
+    id: pageStack
+      Page {
+
+        id: home
 
         header: TextField {
           id: header
@@ -82,12 +86,12 @@ MainView {
             visible: true
             actions: [
                 RadialAction {
-                    id: info
+                    id: about
                     iconName: "info"
                     onTriggered: {
-                       // webview.reload()
+                      pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
                     }
-                    text: qsTr("Info")
+                    text: qsTr("About")
                 },
 
                  RadialAction {
@@ -106,9 +110,10 @@ MainView {
                        // webview.reload()
                     }
                     text: qsTr("Save")
-                }
+                }                
             ]
         } 
     }
+  }
 }
    
