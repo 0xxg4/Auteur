@@ -34,8 +34,6 @@ MainView {
     width: units.gu(45)
     height: units.gu(55)
 
-  PageStack {
-    id: pageStack
       Page {
 
         id: home
@@ -89,19 +87,10 @@ MainView {
                     id: about
                     iconName: "info"
                     onTriggered: {
-                      pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+                      Qt.openUrlExternally("https://gbrlplstrn.now.sh/auteur.html")
                     }
                     text: qsTr("About")
-                },
-
-                 RadialAction {
-                    id: settings
-                    iconName: "settings"
-                    onTriggered: {
-                       // webview.reload()
-                    }
-                    text: qsTr("Settings")
-                },
+                }, 
 
                 RadialAction {
                     id: save
@@ -114,6 +103,5 @@ MainView {
             ]
         } 
     }
-  }
 }
    
